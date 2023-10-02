@@ -1,10 +1,12 @@
 package com.example.qwe.services;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
 public class TransactionManager {
+    @Resource(name = "dbDataSource")
     private DataSource ds;
 
     public TransactionManager(DataSource ds) {
